@@ -64,7 +64,7 @@ export default function Page() {
       </nav>
 
       <section id="top" className="hero">
-        <video className="hero-video" autoPlay muted loop playsInline poster="https://www.veranta.xyz/images/home/hero/veranta-poster.jpg"><source src="https://www.veranta.xyz/videos/veranta-bg.webm" type="video/webm" /></video>
+        <video className="hero-video" autoPlay muted loop playsInline poster="/city-poster.jpg"><source src="https://www.veranta.xyz/videos/veranta-bg.webm" type="video/webm" /></video>
         <div className="hero-vignette" />
         <div className="hero-content">
           <p className="eyebrow">Independent AI trading benchmarks</p>
@@ -98,6 +98,7 @@ export default function Page() {
       <section id="methodology" className={`split-section reveal-section ${isVisible('methodology') ? 'is-visible' : ''}`}>
         <p className="eyebrow">The Velom standard</p>
         <h2>Performance<br /><em>with context.</em></h2>
+        <div className="cube-visual"><img src="/avnt-cube.svg" alt="" /></div>
         <div className="feature-list">
           <div className="feature-item">
             <h3><span className="feature-mark mark-a" />Standardized metrics</h3>
@@ -134,7 +135,15 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="launch" className={`launch-section reveal-section ${isVisible('launch') ? 'is-visible' : ''}`}><p className="eyebrow">Coming soon</p><h2>A clearer market<br /><em>starts here.</em></h2><p>Join the first independent scoreboard for AI trading agents.</p><a className="solid-button" href="mailto:hello@velom.ai">Join the waitlist <ArrowRight size={18} /></a><footer className="site-footer"><a className="footer-brand" href="#top"><img src="/velom-logo.png" alt="Velom" /></a><div className="footer-links"><div><span>Explore</span><a href="#about">Why Velom</a><a href="#markets">Benchmark</a><a href="#methodology">Methodology</a></div><div><span>Resources</span><a href="#faq">FAQ</a><a href="#launch">Research</a><a href="mailto:hello@velom.ai">Contact</a></div><div><span>Connect</span><a href="https://x.com/velom" target="_blank" rel="noreferrer"><XLogo /> X</a><a href="https://discord.gg/velom" target="_blank" rel="noreferrer"><DiscordLogo /> Discord</a><a href="mailto:hello@velom.ai">Email <ExternalLink size={12} /></a></div></div><p className="footer-meta">© 2026 Velom. Independent evaluation for the next generation of trading agents.</p></footer></section>
+      <section id="launch" className={`launch-section reveal-section ${isVisible('launch') ? 'is-visible' : ''}`}>
+        <div className="launch-visual">
+          <div className="launch-card">
+            <h2>Start benchmarking<br />now.</h2>
+            <a className="solid-button" href="mailto:hello@velom.ai">Join the waitlist <ArrowRight size={18} /></a>
+          </div>
+        </div>
+        <footer className="site-footer"><a className="footer-brand" href="#top"><img src="/velom-logo.png" alt="Velom" /></a><div className="footer-links"><div><span>Explore</span><a href="#about">Why Velom</a><a href="#markets">Benchmark</a><a href="#methodology">Methodology</a></div><div><span>Resources</span><a href="#faq">FAQ</a><a href="#launch">Research</a><a href="mailto:hello@velom.ai">Contact</a></div><div><span>Connect</span><a href="https://x.com/velom" target="_blank" rel="noreferrer"><XLogo /> X</a><a href="https://discord.gg/velom" target="_blank" rel="noreferrer"><DiscordLogo /> Discord</a><a href="mailto:hello@velom.ai">Email <ExternalLink size={12} /></a></div></div><p className="footer-meta">© 2026 Velom. Independent evaluation for the next generation of trading agents.</p></footer>
+      </section>
     </main>
   )
 }
