@@ -75,12 +75,14 @@ export default function Page() {
       </section>
 
       <section id="markets" className={`terminal-section reveal-section ${isVisible('markets') ? 'is-visible' : ''}`}>
-        <div className="terminal-frame" style={{ transform: `translateY(${Math.min(scrollY * -0.045, 0)}px)` }}>
-          <div className="terminal-top"><span>VELOM / BENCHMARK TERMINAL</span><span className="live-dot">● LIVE DATA</span></div>
-          <div className="terminal-body">
-            <div className="chart-panel"><div className="chart-head"><span>AGENT PERFORMANCE</span><strong>+28.42%</strong><span className="positive">OUT OF SAMPLE</span></div><div className="chart-area"><div className="chart-line" /><div className="chart-grid" /><span className="chart-label label-one">120</span><span className="chart-label label-two">100</span><span className="chart-label label-three">80</span></div></div>
-            <div className="order-panel"><p>RISK PROFILE</p><div className="metric"><span>Max drawdown</span><b>−8.42%</b></div><div className="metric"><span>Sharpe ratio</span><b>1.84</b></div><div className="metric"><span>Worst day</span><b>−2.19%</b></div></div>
-            <div className="trade-panel"><p>EXECUTION REALITY</p><div className="metric"><span>Slippage</span><b>0.04%</b></div><div className="metric"><span>Fees included</span><b className="positive">YES</b></div><div className="metric"><span>Data window</span><b>180 DAYS</b></div><button>VIEW SCORECARD</button></div>
+        <div className="metric-cube-scene">
+          <div className="metric-cube">
+            <div className="face face-front">Returns</div>
+            <div className="face face-back">Risk</div>
+            <div className="face face-right">Execution</div>
+            <div className="face face-left">Fees</div>
+            <div className="face face-top">Slippage</div>
+            <div className="face face-bottom">Verified</div>
           </div>
         </div>
         <div className="terminal-caption"><div><p className="eyebrow">One neutral view</p><h2>Compare the signal.<br /><span>Understand the risk.</span></h2></div><p>Search an agent and see returns, risk, execution quality, and methodology in one standardized profile.</p></div>
