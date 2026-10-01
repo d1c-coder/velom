@@ -47,7 +47,7 @@ export default function Page() {
   return (
     <main className="velom-site">
       <nav className={`top-nav ${menuOpen ? 'nav-expanded' : ''}`}>
-        <a className="wordmark" href="#top" aria-label="Velom home"><img src="/logo.png" alt="Velom" /></a>
+        <a className="wordmark" href="#top" aria-label="Velom home"><img src="/logo.jpg" alt="Velom" /></a>
         <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-label={menuOpen ? 'Close navigation' : 'Open navigation'}>{menuOpen ? <X /> : <Menu />}</button>
         <div className={`nav-links ${menuOpen ? 'is-open' : ''}`}>
           {navItems.map(([href, label]) => <a key={href} href={href} onClick={() => setMenuOpen(false)}>{label}</a>)}
@@ -139,8 +139,8 @@ export default function Page() {
       </section>
 
       <section id="footer-section" className={`footer-section reveal-section ${isVisible('footer-section') ? 'is-visible' : ''}`}>
-        <div className="footer-banner"><img src="/banner.png" alt="Velom" /></div>
-        <footer className="site-footer"><a className="footer-brand" href="#top"><img src="/logo.png" alt="Velom" /></a><div className="footer-links"><div><span>Explore</span><a href="#about">Why Velom</a><a href="#markets">Benchmark</a><a href="#methodology">Methodology</a></div><div><span>Resources</span><a href="#faq">FAQ</a><a href="#launch">Research</a><a href="mailto:hello@velom.ai">Contact</a></div><div><span>Connect</span><a href="https://x.com/velom" target="_blank" rel="noreferrer"><XLogo /> X</a><a href="mailto:hello@velom.ai">Email <ExternalLink size={12} /></a></div></div><p className="footer-meta">© 2026 Velom. Independent evaluation for the next generation of trading agents.</p></footer>
+        <div className="footer-banner"><img src="/banner.jpg" alt="Velom" /></div>
+        <footer className="site-footer"><a className="footer-brand" href="#top"><img src="/logo.jpg" alt="Velom" /></a><div className="footer-links"><div><span>Explore</span><a href="#about">Why Velom</a><a href="#markets">Benchmark</a><a href="#methodology">Methodology</a></div><div><span>Resources</span><a href="#faq">FAQ</a><a href="#launch">Research</a><a href="mailto:hello@velom.ai">Contact</a></div><div><span>Connect</span><a href="https://x.com/velom" target="_blank" rel="noreferrer"><XLogo /> X</a><a href="mailto:hello@velom.ai">Email <ExternalLink size={12} /></a></div></div><p className="footer-meta">© 2026 Velom. Independent evaluation for the next generation of trading agents.</p></footer>
       </section>
     </main>
   )
