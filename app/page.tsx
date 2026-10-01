@@ -146,7 +146,7 @@ export default function Page() {
       </section>
 
       <section id="footer-section" className={`footer-section reveal-section ${isVisible('footer-section') ? 'is-visible' : ''}`}>
-        <div className="footer-banner"><Image src="/banner.jpg" alt="Velom" width={1500} height={500} /></div>
+        <div className="footer-banner"><Image src="/banner.png" alt="Velom" width={1500} height={500} /></div>
         <footer className="site-footer"><a className="footer-brand" href="#top"><Image src="/logo.jpg" alt="Velom" width={40} height={40} /></a><div className="footer-links"><div><span>Explore</span><a href="#about">Why Velom</a><a href="#markets">Benchmark</a><a href="#methodology">Methodology</a></div><div><span>Resources</span><a href="#faq">FAQ</a><a href="#launch">Research</a><a href="mailto:hello@velom.ai">Contact</a></div><div><span>Connect</span><a href="https://x.com/velom" target="_blank" rel="noreferrer"><XLogo /> X</a><a href="mailto:hello@velom.ai">Email <ExternalLink size={12} /></a></div></div><p className="footer-meta">© 2026 Velom. Independent evaluation for the next generation of trading agents.</p></footer>
       </section>
     </main>
