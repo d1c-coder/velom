@@ -13,8 +13,8 @@ export const metadata: Metadata = {
   description: 'An independent benchmark for AI trading agents. Compare performance, risk, execution, and methodology.',
   generator: 'v0.app',
   icons: {
-    icon: '/favicon.png',
-    apple: '/favicon.png',
+    icon: '/favicon.jpg',
+    apple: '/favicon.jpg',
   },
 }
 
