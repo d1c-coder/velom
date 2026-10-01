@@ -3,6 +3,7 @@
 import { ArrowDown, ArrowRight, ChevronDown, ExternalLink, Menu, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import type { CSSProperties } from 'react'
+import Image from 'next/image'
 
 const markets = ['META', 'AMD', 'SNDK', 'INTC', 'MU', 'BABA', 'MSTR', 'PLTR', 'AVGO', 'NFLX', 'BTC', 'ETH']
 
@@ -47,7 +48,7 @@ export default function Page() {
   return (
     <main className="velom-site">
       <nav className={`top-nav ${menuOpen ? 'nav-expanded' : ''}`}>
-        <a className="wordmark" href="#top" aria-label="Velom home"><img src="/logo.jpg" alt="Velom" /></a>
+        <a className="wordmark" href="#top" aria-label="Velom home"><Image src="/logo.jpg" alt="Velom" width={46} height={46} priority /></a>
         <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-label={menuOpen ? 'Close navigation' : 'Open navigation'}>{menuOpen ? <X /> : <Menu />}</button>
         <div className={`nav-links ${menuOpen ? 'is-open' : ''}`}>
           {navItems.map(([href, label]) => <a key={href} href={href} onClick={() => setMenuOpen(false)}>{label}</a>)}
@@ -69,6 +70,8 @@ export default function Page() {
       </section>
 
       <section id="about" className={`statement reveal-section ${isVisible('about') ? 'is-visible' : ''}`} style={{ '--section-shift': `${Math.max(-32, Math.min(32, (scrollY - 690) * -0.035))}px` } as CSSProperties}>
+        <Image src="/image_1.jpg" alt="" fill sizes="100vw" className="section-bg" />
+        <div className="section-overlay" />
         <p className="eyebrow">The problem</p>
         <p className="statement-large">AI trading claims are easy to publish. Reliable evidence is not.</p>
         <p className="statement-accent">Velom gives every agent the same test.</p>
@@ -110,6 +113,8 @@ export default function Page() {
       </section>
 
       <section id="faq" className={`faq-section reveal-section ${isVisible('faq') ? 'is-visible' : ''}`}>
+        <Image src="/city-poster.jpg" alt="" fill sizes="100vw" className="section-bg" />
+        <div className="section-overlay faq-overlay" />
         <p className="eyebrow">Questions</p>
         <h2 style={{ marginBottom: 50 }}>FAQ</h2>
         <div className="faq-list">
@@ -131,6 +136,8 @@ export default function Page() {
 
       <section id="launch" className={`launch-section reveal-section ${isVisible('launch') ? 'is-visible' : ''}`}>
         <div className="launch-visual">
+          <Image src="/image_2.jpg" alt="" fill sizes="100vw" className="section-bg" />
+          <div className="section-overlay launch-overlay" />
           <div className="launch-card">
             <h2>Start benchmarking<br />now.</h2>
             <a className="solid-button" href="mailto:hello@velom.ai">Join the waitlist <ArrowRight size={18} /></a>
@@ -139,8 +146,8 @@ export default function Page() {
       </section>
 
       <section id="footer-section" className={`footer-section reveal-section ${isVisible('footer-section') ? 'is-visible' : ''}`}>
-        <div className="footer-banner"><img src="/banner.jpg" alt="Velom" /></div>
-        <footer className="site-footer"><a className="footer-brand" href="#top"><img src="/logo.jpg" alt="Velom" /></a><div className="footer-links"><div><span>Explore</span><a href="#about">Why Velom</a><a href="#markets">Benchmark</a><a href="#methodology">Methodology</a></div><div><span>Resources</span><a href="#faq">FAQ</a><a href="#launch">Research</a><a href="mailto:hello@velom.ai">Contact</a></div><div><span>Connect</span><a href="https://x.com/velom" target="_blank" rel="noreferrer"><XLogo /> X</a><a href="mailto:hello@velom.ai">Email <ExternalLink size={12} /></a></div></div><p className="footer-meta">© 2026 Velom. Independent evaluation for the next generation of trading agents.</p></footer>
+        <div className="footer-banner"><Image src="/banner.jpg" alt="Velom" width={1500} height={500} /></div>
+        <footer className="site-footer"><a className="footer-brand" href="#top"><Image src="/logo.jpg" alt="Velom" width={40} height={40} /></a><div className="footer-links"><div><span>Explore</span><a href="#about">Why Velom</a><a href="#markets">Benchmark</a><a href="#methodology">Methodology</a></div><div><span>Resources</span><a href="#faq">FAQ</a><a href="#launch">Research</a><a href="mailto:hello@velom.ai">Contact</a></div><div><span>Connect</span><a href="https://x.com/velom" target="_blank" rel="noreferrer"><XLogo /> X</a><a href="mailto:hello@velom.ai">Email <ExternalLink size={12} /></a></div></div><p className="footer-meta">© 2026 Velom. Independent evaluation for the next generation of trading agents.</p></footer>
       </section>
     </main>
   )
